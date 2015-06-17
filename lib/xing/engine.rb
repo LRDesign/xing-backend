@@ -3,7 +3,8 @@ module Xing
   class Engine < ::Rails::Engine
     isolate_namespace Xing
 
-    config.autoload_paths += Dir[File.join(__FILE__, '../controllers/**/')]
+    #config.autoload_paths += Dir[File.join(__FILE__, '../controllers/**/')]
+    config.autoload_paths += Dir[File.join(__FILE__, '../../../app/controllers/**/')]
 
     config.generators do |g|
       g.test_framework :rspec
